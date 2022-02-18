@@ -27,7 +27,11 @@ class PoolPage extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Image.asset("images/ball$PoolNumber.png"),
+              child: TextButton(
+                  onPressed: () {
+                    print("Vous avez appuyez sur la boule");
+                  },
+                  child: Image.asset("images/ball$PoolNumber.png")),
             ),
           ),
         ],
