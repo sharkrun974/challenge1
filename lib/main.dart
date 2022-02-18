@@ -48,6 +48,11 @@ class PoolPage2 extends StatefulWidget {
 
 class _PoolPage2State extends State<PoolPage2> {
   int PoolNumber = Random().nextInt(5) + 1;
+
+  poolChanged() {
+    PoolNumber = Random().nextInt(5) + 1;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -59,7 +64,7 @@ class _PoolPage2State extends State<PoolPage2> {
               child: TextButton(
                   onPressed: () {
                     setState(() {
-                      PoolNumber = Random().nextInt(5) + 1;
+                      poolChanged();
                     });
                     print("Vous avez appuyez sur la boule");
                   },
